@@ -1,0 +1,171 @@
+import './style.css'
+import * as d3 from 'd3'
+import data from './data.json'
+
+const url =
+  'https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json'
+
+main()
+
+async function main(): Promise<void> {
+  // const data = await getData(url)
+
+  drawGraph(data)
+}
+
+// async function getData(url: string): Promise<Array<RiderRecord>> {
+//   try {
+//     const res = await fetch(url)
+//     const data = res.json()
+//     return data
+//   } catch (error) {
+//     throw error
+//   }
+// }
+
+function drawGraph(data: RiderRecord[]): void {
+  const h = 500
+  const w = 800
+  const pad = 50
+
+  const svg = d3.select('svg').attr('width', w).attr('height', h)
+  svg.select('text').style('display', 'none')
+
+  const xmax = d3.max(data, (item) => +item.Year) || 1900
+  const xmin = d3.min(data, (item) => +item.Year) || 2099
+  const ymax = d3.max(data, (item) => +item.Seconds) || 3600
+  const ymin = d3.min(data, (item) => +item.Seconds) || 0
+
+  const xscale = d3
+    .scaleTime()
+    .range([pad, w - pad])
+    .domain([xmin, xmax])
+
+  const yscale = d3
+    .scaleLinear()
+    .domain([ymin, ymax])
+    .range([pad, h - pad])
+
+  const xaxis = d3.axisBottom(xscale)
+  const yaxis = d3.axisLeft(yscale)
+
+  xaxis.tickFormat((tick) => {
+    return new Date(tick).getFullYear()
+    console.log(new Date(tick).getFullYear())
+  })
+
+  yaxis.tickFormat((tick) =>
+    `${Math.floor(+tick / 60)}:${+tick % 60}`.padEnd(5, '0')
+  )
+
+  svg
+    .append('g')
+    .attr('transform', `translate(0 , ${h - pad})`)
+    .attr('id', 'x-axis')
+    .call(xaxis)
+  svg
+    .append('g')
+    .attr('transform', `translate(${pad}, 0)`)
+    .attr('id', 'y-axis')
+    .call(yaxis)
+
+  svg
+    .selectAll('circle')
+    .data(data)
+    .enter()
+    .append('circle')
+    // Add your code below this line
+    .attr('data-xvalue', (item) => +item.Year)
+    .attr('data-yvalue', (item) => new Date(0, 0, 0, 0, 0, item.Seconds))
+    .attr('class', 'dot')
+
+    .attr('cx', (item) => xscale(item.Year))
+    .attr('cy', (item) => yscale(item.Seconds))
+    .attr('r', 5)
+    .attr('fill', (item) => (item.Doping.length === 0 ? 'orange' : 'teal'))
+    .on('mouseover', (event, data) => {
+      showTooltip(event.target, data)
+
+      event.target.setAttribute('stroke', 'white')
+      event.target.setAttribute('stroke-width', '1')
+    })
+    .on('mouseout', (event) => {
+      hideTooltip()
+
+      event.target.setAttribute('stroke-width', '0')
+    })
+
+  drawLegends(svg)
+}
+
+function drawLegends(
+  svg: d3.Selection<d3.BaseType, unknown, HTMLElement, any>
+): void {
+  const legendx = 600
+  const legendy = 150
+
+  svg
+    .append('rect')
+    .attr('x', legendx - 15)
+    .attr('y', legendy - 6)
+    .attr('width', 10)
+    .attr('height', 10)
+    .attr('fill', 'teal')
+
+  svg
+    .append('text')
+    .text('Riders with doping allegations')
+    .attr('x', legendx)
+    .attr('y', legendy)
+    .attr('dominant-baseline', 'middle') // Center the
+    .attr('fill', 'white')
+    .style('font-size', '0.70rem')
+    .style('text-align', 'right')
+
+  svg
+    .append('text')
+    .text('No doping allegations')
+    .attr('x', legendx)
+    .attr('y', legendy + 20)
+    .attr('dominant-baseline', 'middle') // Center the
+    .attr('fill', 'white')
+    .style('font-size', '0.70rem')
+    .style('text-align', 'right')
+
+  svg
+    .append('rect')
+    .attr('x', legendx - 15)
+    .attr('y', legendy + 15)
+    .attr('width', 10)
+    .attr('height', 10)
+    .attr('fill', 'orange')
+    .append('text')
+    .text('123')
+}
+
+function showTooltip(target: any, data: RiderRecord): void {
+  const tooltip: HTMLDivElement | null = document.querySelector('.tooltip')
+  if (!tooltip) return
+
+  tooltip.setAttribute('data-year', target.dataset.xvalue)
+  tooltip.classList.remove('hidden')
+
+  tooltip.style.transform = `translate(${+target.dataset.xvalue + 20}px, ${
+    +target.dataset.yvalue - 25
+  }px)`
+
+  tooltip.innerHTML = `
+  <div id='legend'>
+    <p>${data.Name}: ${data.Nationality}</p>
+    <p>Year: ${data.Year}, Time: ${data.Time}</p>
+  
+    ${data.Doping.length === 0 ? '' : `<br/><p>${data.Doping}</p>`}
+  </div>
+  `
+}
+
+function hideTooltip(): void {
+  const tooltip: HTMLDivElement | null = document.querySelector('.tooltip')
+  if (!tooltip) return
+  tooltip.classList.add('hidden')
+}

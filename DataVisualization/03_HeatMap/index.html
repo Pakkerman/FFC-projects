@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FFC - Data Visualization - Heat Map</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2 id="title">Data Visualization</h2>
+      <h1 id="title">Heat Map</h1>
+      <div id="tooltip" class="tooltip hidden">
+        <p id="date">year - month</p>
+        <p id="temp">temp</p>
+        <p id="delta">delta</p>
+      </div>
+      <div class="svg-container">
+        <svg class="svg-primary" width="375" height="450"></svg>
+      </div>
+      <svg id="legend" class="svg-secondary" width="375" height="100"></svg>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
