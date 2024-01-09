@@ -1,0 +1,14 @@
+## freeCodeCamp Course Projects
+This is a repo for course completion projects, see <a href="https://www.freecodecamp.org/" style="color: orange;">freeCodeCamp.com</a> for more details.
+
+
+
+#### Contents
+
+  - ### <a href="https://www.freecodecamp.org/learn/data-visualization/" style="color: orange;">Data Visualization</a>
+    - [x] <a target="_blank" href="https://codepen.io/pakkerman/pen/vYbPBqw" style="color: orange;">01 - BarChart</a>
+    - [x] <a target="_blank" href="https://codepen.io/pakkerman/pen/bGzPwQr" style="color: orange;">02 - ScatterplotGraph</a>
+    - [x] <a target="_blank" href="https://codepen.io/pakkerman/pen/GReKaVm" style="color: orange;">03 - HeatMap</a>
+    - [x] <a target="_blank" href="https://codepen.io/pakkerman/pen/eYXJRzE" style="color: orange;">04 - ChoroplethMap</a>
+    - [ ] <a target="_blank" href="" style="color: orange;">05 - TreemapDiagram</a>
+
