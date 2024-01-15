@@ -1,7 +1,4 @@
-import { Games, Kickstarter, Movies } from './global'
 import * as d3 from 'd3'
-import json from './data.json'
-
 import './style.css'
 
 const KickstarterPledges =
@@ -15,34 +12,14 @@ main()
 
 async function main() {
   const data = await fetchData([KickstarterPledges, MovieSales, VideoGameSales])
-
   const [kickstarterData, moviesData, gamesData] = data
 
-  const gamesBtn = document.querySelector('#games')
-  const moviesBtn = document.querySelector('#movies')
-  const kickstarterBtn = document.querySelector('#kickstarter')
-  if (!gamesBtn || !moviesBtn || !kickstarterBtn) {
-    console.error('something wrong with buttons')
-    return
-  }
-
-  gamesBtn.addEventListener('click', () => {
-    gamesBtn.classList.add('view-selected')
-    draw(gamesData)
-  })
-  moviesBtn.addEventListener('click', () => {
-    moviesBtn.classList.add('view-selected')
-    draw(moviesData)
-  })
-  kickstarterBtn.addEventListener('click', () => {
-    kickstarterBtn.classList.add('view-selected')
-    draw(kickstarterData)
-  })
-
+  addListenerToViewButtons(gamesData, moviesData, kickstarterData)
   draw(gamesData)
 }
 
-function draw(data: string[]): void {
+function draw(data: string): void {
+  console.log(data)
   const w = 1100
   const h = 650
   const pad = 30
@@ -104,6 +81,8 @@ function draw(data: string[]): void {
       // while (d.depth > 1) d = d.parent
       // return color(d.data.name)
     })
+    .on('mousemove', showTooltip)
+    .on('mouseleave', hideTooltip)
 
   leaf
     .append('text')
@@ -123,8 +102,8 @@ function draw(data: string[]): void {
     .attr('fill', 'black')
     .style('font-size', '0.7rem')
 
-  const legendWidth = 400
-  const legendHeight = 400
+  const legendWidth = 700
+  const legendHeight = 250
 
   console.log(root.data.children)
 
@@ -135,18 +114,24 @@ function draw(data: string[]): void {
     .attr('id', 'legend')
     .attr('width', legendWidth)
     .attr('height', legendHeight)
-    .attr('x', 500)
-    .attr('y', 500)
 
   legend
     .selectAll('g')
     .data(root.data.children)
     .enter()
     .append('g')
+    .style('transform', (_, idx) => {
+      let x = 0
+      let y = Math.floor(idx / 3) * 30
+      if (idx % 3 === 0) x = -200 + legendWidth / 2
+      else if (idx % 3 === 1) x = 0 + legendWidth / 2
+      else if (idx % 3 === 2) x = 200 + legendWidth / 2
+
+      return `translate(${x - 80}px, ${y + 30}px)`
+    })
     .append('rect')
     .attr('class', 'legend-item')
     .attr('fill', (d) => color(d.name))
-    .attr('y', (_, idx) => 10 + idx * 25)
     .attr('width', 20)
     .attr('height', 20)
 
@@ -154,13 +139,35 @@ function draw(data: string[]): void {
     .selectAll('g')
     .append('text')
     .text((d) => d.name)
-    .attr('y', (_, idx) => 20 + idx * 25)
+    .attr('y', 12.5)
     .attr('x', 30)
     .attr('text-anchor', 'left')
     .attr('fill', '#E2E8F0')
     .style('alignment-baseline', 'middle')
     .attr('width', 20)
     .attr('height', 20)
+
+  // tooltips
+
+  function showTooltip(
+    event: MouseEvent,
+    data: d3.HierarchyNode<string>
+  ): void {
+    const { name, category, value } = data.data
+    const { pageX, pageY } = event
+
+    d3.select('.tooltip')
+      .attr('data-value', value)
+      .style('transform', `translate(${pageX + 20}px, ${pageY + 20}px)`)
+      .style('display', 'block')
+      .html(
+        `<p>Name: ${name}</p><p>Category: ${category}</p><p>Value: ${value}</p>`
+      )
+  }
+
+  function hideTooltip(): void {
+    d3.select('.tooltip').style('display', 'none')
+  }
 }
 
 async function fetchData(urls: string[]): Promise<any> {
@@ -170,4 +177,37 @@ async function fetchData(urls: string[]): Promise<any> {
   } catch (error) {
     console.log('somthing wrong with fetching data:', error)
   }
+}
+
+function addListenerToViewButtons(
+  gamesData: string,
+  moviesData: string,
+  kickstarterData: string
+) {
+  const gamesBtn = document.querySelector('#games')
+  const moviesBtn = document.querySelector('#movies')
+  const kickstarterBtn = document.querySelector('#kickstarter')
+  if (!gamesBtn || !moviesBtn || !kickstarterBtn) {
+    console.error('something wrong with buttons')
+    return
+  }
+
+  gamesBtn.addEventListener('click', () => {
+    gamesBtn.classList.add('view-selected')
+    moviesBtn.classList.remove('view-selected')
+    kickstarterBtn.classList.remove('view-selected')
+    draw(gamesData)
+  })
+  moviesBtn.addEventListener('click', () => {
+    gamesBtn.classList.remove('view-selected')
+    moviesBtn.classList.add('view-selected')
+    kickstarterBtn.classList.remove('view-selected')
+    draw(moviesData)
+  })
+  kickstarterBtn.addEventListener('click', () => {
+    gamesBtn.classList.remove('view-selected')
+    moviesBtn.classList.remove('view-selected')
+    kickstarterBtn.classList.add('view-selected')
+    draw(kickstarterData)
+  })
 }

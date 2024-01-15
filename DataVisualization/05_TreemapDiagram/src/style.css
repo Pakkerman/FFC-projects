@@ -103,17 +103,12 @@ button:focus-visible {
 }
 
 
-.svg-container {
+svg {
   border-radius: 15px;
   background: #44403C;
 
 }
 
-.svg-secondary {
-  background: #44403C;
-  border-radius: 15px;
-
-}
 
 
 .dot {

@@ -11,4 +11,6 @@ This is a repo for course completion projects, see <a href="https://www.freecode
     - [x] <a target="_blank" href="https://codepen.io/pakkerman/pen/GReKaVm" style="color: orange;">03 - HeatMap</a>
     - [x] <a target="_blank" href="https://codepen.io/pakkerman/pen/eYXJRzE" style="color: orange;">04 - ChoroplethMap</a>
     - [ ] <a target="_blank" href="" style="color: orange;">05 - TreemapDiagram</a>
+  - ### <a href="https://www.freecodecamp.org/learn/relational-database" style="color: orange;">Relational Database</a>
+    - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/relational-database/build-a-celestial-bodies-database-project/build-a-celestial-bodies-database" style="color: orange;">Celestial Bodies Database</a>
 
