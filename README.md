@@ -15,4 +15,5 @@ This is a repo for course completion projects, see <a href="https://www.freecode
     - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/relational-database/build-a-celestial-bodies-database-project/build-a-celestial-bodies-database" style="color: orange;">Celestial Bodies Database</a>
     - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/relational-database/build-a-world-cup-database-project/build-a-world-cup-database" style="color: orange;">World Cup Database</a>
     - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/relational-database/build-a-salon-appointment-scheduler-project/build-a-salon-appointment-scheduler" style="color: orange;">Salon</a>
+    - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/relational-database/build-a-periodic-table-database-project/build-a-periodic-table-database" style="color: orange;">Periodic Table Database</a>
 
