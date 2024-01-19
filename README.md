@@ -10,7 +10,7 @@ This is a repo for course completion projects, see <a href="https://www.freecode
     - [x] <a target="_blank" href="https://codepen.io/pakkerman/pen/bGzPwQr" style="color: orange;">02 - ScatterplotGraph</a>
     - [x] <a target="_blank" href="https://codepen.io/pakkerman/pen/GReKaVm" style="color: orange;">03 - HeatMap</a>
     - [x] <a target="_blank" href="https://codepen.io/pakkerman/pen/eYXJRzE" style="color: orange;">04 - ChoroplethMap</a>
-    - [ ] <a target="_blank" href="" style="color: orange;">05 - TreemapDiagram</a>
+    - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-treemap-diagram" style="color: orange;">05 - TreemapDiagram</a>
   - ### <a href="https://www.freecodecamp.org/learn/relational-database" style="color: orange;">Relational Database</a>
     - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/relational-database/build-a-celestial-bodies-database-project/build-a-celestial-bodies-database" style="color: orange;">Celestial Bodies Database</a>
     - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/relational-database/build-a-world-cup-database-project/build-a-world-cup-database" style="color: orange;">World Cup Database</a>

@@ -148,7 +148,6 @@ function draw(data: string): void {
     .attr('height', 20)
 
   // tooltips
-
   function showTooltip(
     event: MouseEvent,
     data: d3.HierarchyNode<string>
@@ -159,14 +158,14 @@ function draw(data: string): void {
     d3.select('.tooltip')
       .attr('data-value', value)
       .style('transform', `translate(${pageX + 20}px, ${pageY + 20}px)`)
-      .style('display', 'block')
+      .classed('hidden', false)
       .html(
         `<p>Name: ${name}</p><p>Category: ${category}</p><p>Value: ${value}</p>`
       )
   }
 
   function hideTooltip(): void {
-    d3.select('.tooltip').style('display', 'none')
+    d3.select('.tooltip').classed('hidden', true)
   }
 }
 
