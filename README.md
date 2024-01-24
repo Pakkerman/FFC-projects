@@ -20,3 +20,6 @@ This is a repo for course completion projects, see <a href="https://www.freecode
 
   - ### <a href="https://www.freecodecamp.org/learn/back-end-development-and-apis" style="color: orange;">Backend Development and APIs</a>
     - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/timestamp-microservice" style="color: orange;">Timestamp Microservice</a>
+
+  - ### <a href="https://www.freecodecamp.org/learn/quality-assurance" style="color: orange;">Quality Assurance</a>
+    - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/metric-imperial-converter" style="color: orange;">Metric-Imperial Converter</a>
