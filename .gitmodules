@@ -4,3 +4,6 @@
 [submodule "DataVisualization/FFC-BarChart"]
 	path = DataVisualization/FFC-BarChart
 	url = https://github.com/Pakkerman/FFC-BarChart
+[submodule "DataVisualization/FFC-ScatterplotGraph"]
+	path = DataVisualization/FFC-ScatterplotGraph
+	url = https://github.com/Pakkerman/FFC-ScatterplotGraph
