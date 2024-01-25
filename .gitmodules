@@ -10,3 +10,9 @@
 [submodule "DataVisualization/FFC-HeatMap"]
 	path = DataVisualization/FFC-HeatMap
 	url = https://github.com/Pakkerman/FFC-HeatMap
+[submodule "DataVisualization/FFC-ChoroplethMap"]
+	path = DataVisualization/FFC-ChoroplethMap
+	url = https://github.com/Pakkerman/FFC-ChoroplethMap
+[submodule "DataVisualization/FFC-TreemapDiagram"]
+	path = DataVisualization/FFC-TreemapDiagram
+	url = https://github.com/Pakkerman/FFC-TreemapDiagram
