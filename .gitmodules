@@ -1,0 +1,3 @@
+[submodule "QualityAssurance/FFC-MeterImpConverter"]
+	path = QualityAssurance/FFC-MeterImpConverter
+	url = https://github.com/Pakkerman/FFC-MeterImpConverter
