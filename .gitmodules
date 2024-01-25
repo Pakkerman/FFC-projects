@@ -1,3 +1,6 @@
 [submodule "QualityAssurance/FFC-MeterImpConverter"]
 	path = QualityAssurance/FFC-MeterImpConverter
 	url = https://github.com/Pakkerman/FFC-MeterImpConverter
+[submodule "DataVisualization/FFC-BarChart"]
+	path = DataVisualization/FFC-BarChart
+	url = https://github.com/Pakkerman/FFC-BarChart
