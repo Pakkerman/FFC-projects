@@ -7,3 +7,6 @@
 [submodule "DataVisualization/FFC-ScatterplotGraph"]
 	path = DataVisualization/FFC-ScatterplotGraph
 	url = https://github.com/Pakkerman/FFC-ScatterplotGraph
+[submodule "DataVisualization/FFC-HeatMap"]
+	path = DataVisualization/FFC-HeatMap
+	url = https://github.com/Pakkerman/FFC-HeatMap
