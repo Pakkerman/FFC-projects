@@ -34,3 +34,8 @@ This is a repo for course completion projects, see <a href="https://www.freecode
 
   - ### <a href="https://www.freecodecamp.org/learn/quality-assurance" style="color: orange;">Quality Assurance</a>
     - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/metric-imperial-converter" style="color: orange;">Metric-Imperial Converter</a>
+      -  link to [repo](https://github.com/Pakkerman/FFC-MeterImpConverter)
+    - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/issue-tracker" style="color: orange;">Issue Tracker</a>
+      -  link to [repo](https://github.com/Pakkerman/FFC-IssueTracker)
+    - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/personal-library" style="color: orange;">Personal Library</a>
+      -  link to [repo](https://github.com/Pakkerman/FFC-Library)

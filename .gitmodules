@@ -19,3 +19,6 @@
 [submodule "QualityAssurance/FFC-IssueTracker"]
 	path = QualityAssurance/FFC-IssueTracker
 	url = https://github.com/Pakkerman/FFC-IssueTracker
+[submodule "QualityAssurance/FFC-Library"]
+	path = QualityAssurance/FFC-Library
+	url = https://github.com/Pakkerman/FFC-Library
