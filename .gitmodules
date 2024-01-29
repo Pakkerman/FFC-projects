@@ -22,3 +22,6 @@
 [submodule "QualityAssurance/FFC-Library"]
 	path = QualityAssurance/FFC-Library
 	url = https://github.com/Pakkerman/FFC-Library
+[submodule "QualityAssurance/FFC-SudokuSolver"]
+	path = QualityAssurance/FFC-SudokuSolver
+	url = https://github.com/Pakkerman/FFC-SudokuSolver
