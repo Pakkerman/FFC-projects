@@ -39,3 +39,5 @@ This is a repo for course completion projects, see <a href="https://www.freecode
       -  link to [repo](https://github.com/Pakkerman/FFC-IssueTracker)
     - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/personal-library" style="color: orange;">Personal Library</a>
       -  link to [repo](https://github.com/Pakkerman/FFC-Library)
+    - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/sudoku-solver" style="color: orange;">Sudoku Solver</a>
+      -  link to [repo](https://github.com/Pakkerman/FFC-SudokuSolver)
