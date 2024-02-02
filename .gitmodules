@@ -28,3 +28,6 @@
 [submodule "QualityAssurance/FFC-AmericanBritishEnglishTranslator"]
 	path = QualityAssurance/FFC-AmericanBritishEnglishTranslator
 	url = https://github.com/Pakkerman/FFC-AmericanBritishEnglishTranslator
+[submodule "ScientificComputingWithPython/FFC-ArithmeticFormatter"]
+	path = ScientificComputingWithPython/FFC-ArithmeticFormatter
+	url = https://github.com/Pakkerman/FFC-ArithmeticFormatter
