@@ -25,3 +25,6 @@
 [submodule "QualityAssurance/FFC-SudokuSolver"]
 	path = QualityAssurance/FFC-SudokuSolver
 	url = https://github.com/Pakkerman/FFC-SudokuSolver
+[submodule "QualityAssurance/FFC-AmericanBritishEnglishTranslator"]
+	path = QualityAssurance/FFC-AmericanBritishEnglishTranslator
+	url = https://github.com/Pakkerman/FFC-AmericanBritishEnglishTranslator

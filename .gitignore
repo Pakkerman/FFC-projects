@@ -41,3 +41,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 log.*
+
+
+# python
+__pycache__/
+.pytest_cache
+
