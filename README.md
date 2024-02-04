@@ -49,3 +49,5 @@ This is a repo for course completion projects, see <a href="https://www.freecode
       -  link to [repo](https://github.com/Pakkerman/FFC-TimeCalculator)
     - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/budget-app" style="color: orange;">Budget App</a>
       -  link to [repo](https://github.com/Pakkerman/FFC-BudgetApp)
+    - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/polygon-area-calculator" style="color: orange;">Polygon Area Calculator</a>
+      -  link to [repo](https://github.com/Pakkerman/FFC-PolygonAreaCalculator)

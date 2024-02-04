@@ -37,3 +37,6 @@
 [submodule "ScientificComputingWithPython/FFC-BudgetApp"]
 	path = ScientificComputingWithPython/FFC-BudgetApp
 	url = https://github.com/Pakkerman/FFC-BudgetApp
+[submodule "ScientificComputingWithPython/FFC-PolygonAreaCalculator"]
+	path = ScientificComputingWithPython/FFC-PolygonAreaCalculator
+	url = https://github.com/Pakkerman/FFC-PolygonAreaCalculator
