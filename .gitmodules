@@ -31,3 +31,9 @@
 [submodule "ScientificComputingWithPython/FFC-ArithmeticFormatter"]
 	path = ScientificComputingWithPython/FFC-ArithmeticFormatter
 	url = https://github.com/Pakkerman/FFC-ArithmeticFormatter
+[submodule "ScientificComputingWithPython/FFC-TimeCalculator"]
+	path = ScientificComputingWithPython/FFC-TimeCalculator
+	url = https://github.com/Pakkerman/FFC-TimeCalculator
+[submodule "ScientificComputingWithPython/FFC-BudgetApp"]
+	path = ScientificComputingWithPython/FFC-BudgetApp
+	url = https://github.com/Pakkerman/FFC-BudgetApp
