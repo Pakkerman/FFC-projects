@@ -45,3 +45,7 @@ This is a repo for course completion projects, see <a href="https://www.freecode
   - ### <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/" style="color: orange;">Scientific Computing with Python</a>
     - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/arithmetic-formatter" style="color: orange;">Arithmetic Formatter</a>
       -  link to [repo](https://github.com/Pakkerman/FFC-ArithmeticFormatter)
+    - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/time-calculator" style="color: orange;">Time Calculator</a>
+      -  link to [repo](https://github.com/Pakkerman/FFC-TimeCalculator)
+    - [x] <a target="_blank" href="https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/budget-app" style="color: orange;">Budget App</a>
+      -  link to [repo](https://github.com/Pakkerman/FFC-BudgetApp)
